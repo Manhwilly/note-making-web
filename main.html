@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>
+            Note Making Web
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", intitial-scale="1.0">
+        <link rel="stylesheet" href="/static/style.css" >
+      <script src="/static/javascript.js"></script>
+  </head>
+  <body>
+      <header>
+        <h1>Note making web application</h1>
+    </header>
+    <input class="navbar-collapse" type="checkbox" checked>
+    <nav class="navbar">
+            <div class="navbar-left">
+        <a class="navbar-band" href="#home">H O M E</a>
+            </div>
+            <div class="navbar-right">
+                <a class="nav-link" ><button class="open-button" onclick="openForm()">Create Note</button><div class="form-popup" id="myForm">
+  <form action="/getnote" method="post" class="form-container">
+    <label for="Title"><b>Title</b></label>
+    <input type="text" placeholder="Enter Title" name="Note_title" required>
+
+    <label for="content"><b>Your Note:..</b></label>
+    <input type="password" placeholder="Enter your note" name="content" required>
+
+    <button type="submit" class="btn">Create</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+  </div></a>
+    </div>
+  </nav>
+  <div id="note-container">
+<textarea class="note" class="input" id="input" onfocus="this.value=''" id="note" placeholder="your note:..."></textarea>
+<button class="add-note" id="send-btn">+</button>
+  </div>
+  
+  </body>
+</html>
